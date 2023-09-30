@@ -1,0 +1,65 @@
+.char {
+  max-width: 38%;
+  position: sticky;
+  top: 0;
+  right: 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  padding: 25px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.char_info {
+  display: flex;
+  text-align: start;
+}
+.char_img {
+  margin-right: 25px;
+}
+.char_img img {
+  float: left;
+  width: 150px;
+  height: 100%;
+  border-radius: 5px;
+}
+.char_name button {
+  width: 130px;
+  margin: 10px 0 0;
+  text-align: center;
+}
+.description {
+  margin-top: 10px;
+}
+.char_comics {
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 14px;
+  margin: 10px 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.char h3 {
+  font-size: 18px;
+  margin: 10px 0 14px;
+}
+
+.char::-webkit-scrollbar {
+  border-radius: 50px;
+  width: 5px; /* ширина для вертикального скролла */
+  background-color: rgba(128, 128, 128, 0.439);
+}
+
+/* ползунок скроллбара */
+.char::-webkit-scrollbar-thumb {
+  background-color: #9f0013;
+  border-radius: 50px;
+}
+
+@media (max-width: 1100px) {
+  .char {
+    display: none;
+  }
+}

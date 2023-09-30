@@ -1,0 +1,13 @@
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .pagination {
+    gap: 15px;
+    flex-direction: column-reverse;
+  }
+}
