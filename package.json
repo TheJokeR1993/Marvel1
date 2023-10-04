@@ -2,6 +2,7 @@
   "name": "marvel",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thejoker1993.github.io/Marvel1/",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.2",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predploy": "npm run build",
+    "deploy": "gh-pages -d build -b main"
   },
   "eslintConfig": {
     "extends": [

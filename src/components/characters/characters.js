@@ -52,11 +52,6 @@ const Characters = () => {
           </>
         )}
       </div>
-      <div>
-        <div>
-          <Skeleton height={29} borderRadius={8} width={280} />
-        </div>
-      </div>
       <div className={styles.paginations}>
         <Paginations
           total={data.total}
