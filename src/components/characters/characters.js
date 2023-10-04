@@ -33,7 +33,6 @@ const Characters = () => {
     if (state.active) return;
     dispatch(changeActiveCharacter(data.results[0]));
   }, [isLoading]);
-  console.log(1);
   if (isLoading) return <Loading />;
   //  char={!active ? data.data.results[0] : active}
   return (

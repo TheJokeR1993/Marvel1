@@ -2,7 +2,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ComicsBanner from "../comics-banner/comics-banner";
 import styles from "./card-char.module.css";
 import { useGetCharQuery } from "../../services/charastersApi";
-import ErrorApi from "../errorApi/errorApi";
+import ErrorApi from "../error-api/error-api";
 import Loading from "../loading/loading";
 const CardChar = () => {
   const { id } = useParams();

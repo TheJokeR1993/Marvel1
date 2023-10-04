@@ -3,7 +3,7 @@ import ComicsBanner from "../comics-banner/comics-banner";
 import styles from "./card-comic.module.css";
 import { useGetOneComicQuery } from "../../services/comicsApi";
 import { Fragment } from "react";
-import ErrorApi from "../errorApi/errorApi";
+import ErrorApi from "../error-api/error-api";
 import Loading from "../loading/loading";
 const CardComic = () => {
   const { id } = useParams();

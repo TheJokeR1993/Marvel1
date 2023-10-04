@@ -27,7 +27,7 @@ const CharRandom = () => {
   }
 
   return (
-    <div className={styles.randomchar}>
+    <div className={styles.random_char}>
       <div className={styles.info}>
         {isFetching ? (
           <Skeleton width={180} height={180} />
