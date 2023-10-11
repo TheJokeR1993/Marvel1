@@ -1,4 +1,3 @@
-import Pagination from "../pagination/pagination";
 import { useGetAllComicsQuery } from "../../services/comicsApi";
 import styles from "./comics.module.css";
 import { changeLimitComics, changePageComics } from "../../features/comics";
@@ -7,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import ComicsBanner from "../comics-banner/comics-banner";
 import Loading from "../loading/loading";
 import Skeleton from "react-loading-skeleton";
+import Paginations from "../paginations/paginations";
+
 const Comics = () => {
   const navigate = useNavigate();
   const state = useSelector((state) => state.comics);
@@ -42,7 +43,7 @@ const Comics = () => {
         )}
       </div>
       <div>
-        <Pagination
+        <Paginations
           state={state}
           total={data.total}
           changePage={changePageComics}

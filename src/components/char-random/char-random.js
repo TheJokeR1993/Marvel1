@@ -11,20 +11,15 @@ const CharRandom = () => {
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
+  const randomChar = Math.floor(Math.random() * (1011400 - 1011000)) + 1011000;
 
-  const [id, setId] = useState(() => randomChar());
+  const [id, setId] = useState(randomChar);
   const { data, isFetching } = useGetCharQuery({ id });
   const navigate = useNavigate();
   const goToCardChar = (el) =>
     navigate(`/charaster/${el.id}`, {
       state: el,
     });
-  // useEffect(() => {
-  //   if (data) return;
-  function randomChar() {
-    const id = Math.floor(Math.random() * (1011400 - 1011000)) + 1011000;
-    return id;
-  }
 
   return (
     <div className={styles.random_char}>
@@ -54,7 +49,10 @@ const CharRandom = () => {
               <button onClick={() => goToCardChar(data)}>homepage</button>
             )}
             {isMobile && (
-              <button onClick={() => setId(randomChar())}>RAndom</button>
+              <div>
+                <p>Random character for today!</p>
+                <button onClick={() => setId(randomChar)}>try it</button>
+              </div>
             )}
           </div>
         </div>
@@ -67,7 +65,7 @@ const CharRandom = () => {
           Do you want to get to know him better?
         </p>
         <p>Or choose another one</p>
-        <button onClick={() => setId(randomChar())}>try it</button>
+        <button onClick={() => setId(randomChar)}>try it</button>
         <img src={shield} alt="Random character" className={styles.shield} />
         <img src={mjolnir} alt="mjolnir" className={styles.mjolnir} />
       </div>

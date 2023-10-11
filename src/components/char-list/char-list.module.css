@@ -12,7 +12,8 @@
   gap: 25px;
 }
 
-.char {
+.char,
+.active {
   max-height: 100%;
   box-shadow: 5px 5px 15px 0px black;
   background-color: black;
@@ -23,17 +24,12 @@
   width: 200px;
   cursor: pointer;
 }
-
+.description {
+  display: none;
+}
 .active {
   transform: translateY(-10px);
   box-shadow: 5px 5px 15px 0px #9f0013;
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  cursor: pointer;
 }
 
 .char:hover {
@@ -47,4 +43,47 @@
   font-size: 22px;
   padding: 15px;
   text-align: center;
+}
+@media (max-width: 1100px) {
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .card_char {
+    gap: 15px;
+    margin: 0 15px;
+  }
+  .char,
+  .active {
+    width: 30%;
+    transform: translateY(0);
+    box-shadow: 5px 5px 15px 0px black;
+  }
+  .description {
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .char img {
+    width: 100%;
+    height: 30vh;
+  }
+}
+@media (max-width: 768px) {
+  .card_char {
+    flex-direction: column;
+  }
+  .char {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  .char img {
+    border-radius: 10px;
+    margin: 10px;
+    max-height: 200px;
+    float: left;
+    width: 45%;
+    box-shadow: 0 0 15px 0px white;
+  }
 }

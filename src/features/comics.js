@@ -14,8 +14,8 @@ export const comics = createSlice({
     changePageComics: (state, action) => {
       return {
         ...state,
-        page: action.payload,
-        offset: action.payload * state.limit - state.limit,
+        page: action.payload.page,
+        offset: action.payload.offset,
       };
     },
     changeLimitComics: (state, action) => {

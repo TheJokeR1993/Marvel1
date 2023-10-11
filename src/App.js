@@ -5,22 +5,19 @@ import Comics from "./components/comics/comics";
 import Characters from "./components/characters/characters";
 import CardChar from "./components/card-char/card-char";
 import CardComic from "./components/card-comic/card-comic";
-import { useMediaQuery } from "react-responsive";
-import HeaderMobile from "./components/header-mobile/header-mobile";
+import ErrorApi from "./components/error-api/error-api";
 
 const App = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
   return (
     <div className="container">
-      {isMobile ? <HeaderMobile /> : <Header />}
+      <Header />
 
       <Routes>
         <Route path="/" element={<Characters />}></Route>
         <Route path="/comics" element={<Comics />}></Route>
         <Route path="/comics/:id" element={<CardComic />}></Route>
         <Route path="/charaster/:id" element={<CardChar />}></Route>
+        <Route path="*" element={<ErrorApi />}></Route>
       </Routes>
     </div>
   );

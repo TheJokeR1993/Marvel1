@@ -21,9 +21,11 @@ export const charastersApi = createApi({
               id: el.id,
               name: el.name,
 
-              comics: el.comics.items.map((el) => {
-                return { name: el.name, id: el.resourceURI.split("/")[6] };
-              }),
+              comics: el.comics.items.length
+                ? el.comics.items.map((el) => {
+                    return { name: el.name, id: el.resourceURI.split("/")[6] };
+                  })
+                : "No information",
               description:
                 el.description || "No Description about this character",
               img: `${el.thumbnail?.path}.${el.thumbnail?.extension}`,

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import Pagination from "@mui/material/Pagination";
-import styles from "./pagination.module.css";
+import styles from "./paginations.module.css";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { useMediaQuery } from "react-responsive";
 
@@ -9,22 +9,15 @@ const Paginations = ({ total, state, changePage, changeLimit }) => {
     query: "(max-width: 768px)",
   });
   const dispatch = useDispatch();
-  const actionChangePage = (el) => {
-    if (el.ariaLabel) {
-      dispatch(changePage(+el.ariaLabel.split(" ")[3]));
-    } else {
-      el.dataset.testid === "NavigateNextIcon"
-        ? dispatch(changePage(state.page + 1))
-        : dispatch(changePage(state.page - 1));
-    }
+  const actionChangePage = (_, page) => {
+    const offset = page * state.limit - state.limit;
+    dispatch(changePage({ page, offset }));
   };
   return (
     <div className={styles.pagination}>
       <Pagination
         size={isMobile ? "small" : ""}
-        onChange={(e) => {
-          actionChangePage(e.target);
-        }}
+        onChange={actionChangePage}
         page={state.page}
         count={Math.round(total / state.limit)}
         color="secondary"
