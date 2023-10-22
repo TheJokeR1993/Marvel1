@@ -9,7 +9,7 @@ import Loading from "./components/loading/loading";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Marvel1">
     <Provider store={store}>
       <PersistGate loading={<Loading />} persistor={persistor}>
         <App />

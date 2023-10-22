@@ -29,7 +29,7 @@ const Header = () => {
           <div className={isMobile ? styles.burger_menu : ""}>
             <Link
               className={
-                location.pathname === "/" ||
+                location.pathname === `/` ||
                 location.pathname.split("/")[1] === "charaster"
                   ? styles.active
                   : styles.black

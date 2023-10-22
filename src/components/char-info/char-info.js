@@ -15,7 +15,12 @@ const CharInfo = ({ data }) => {
           <h2>{data.name}</h2>
 
           <button
-            onClick={() => navigate(`/charaster/${data.id}`, { state: data })}
+            onClick={() =>
+              navigate(`Marvel1/charaster/${data.id}`, {
+                replace: true,
+                state: data,
+              })
+            }
           >
             Homepage
           </button>

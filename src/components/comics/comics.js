@@ -16,7 +16,7 @@ const Comics = () => {
     offset: state.offset,
   });
 
-  const goToAbout = (el) => navigate(`/comics/${el.id}`, { state: el });
+  const goToAbout = (el) => navigate(`${el.id}`, { state: el });
   if (isLoading) return <Loading />;
 
   return (

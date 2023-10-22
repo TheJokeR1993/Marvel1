@@ -13,10 +13,10 @@ const App = () => {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Characters />}></Route>
-        <Route path="/comics" element={<Comics />}></Route>
-        <Route path="/comics/:id" element={<CardComic />}></Route>
-        <Route path="/charaster/:id" element={<CardChar />}></Route>
+        <Route path={"/"} element={<Characters />}></Route>
+        <Route path={"/comics"} element={<Comics />}></Route>
+        <Route path={"/comics/:id"} element={<CardComic />}></Route>
+        <Route path={"/charaster/:id"} element={<CardChar />}></Route>
         <Route path="*" element={<ErrorApi />}></Route>
       </Routes>
     </div>

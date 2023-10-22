@@ -11,6 +11,7 @@ const CharList = ({ data, isFetching, active }) => {
   const isTablet = useMediaQuery({
     query: "(max-width: 1100px)",
   });
+
   return (
     <div className={styles.card}>
       <div className={styles.card_char}>

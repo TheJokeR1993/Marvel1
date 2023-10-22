@@ -16,7 +16,7 @@ const CardComic = () => {
   const comic = location.state ? location.state : data;
 
   if (isLoading) return <Loading />;
-  if (error) return <ErrorApi />;
+  if (error || !+id) return <ErrorApi />;
 
   return (
     <>
