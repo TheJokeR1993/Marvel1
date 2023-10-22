@@ -2,7 +2,7 @@
   "name": "marvel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thejoker1993.github.io/Marvel1/",
+  "homepage": "https://thejoker1993.github.io/Marvel1",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.2",
